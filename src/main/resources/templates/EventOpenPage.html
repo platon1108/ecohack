@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru"  xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экологические мероприятия</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style_event_page.css">
+
+</head>
+<body>
+    <section class="navigate">
+        <div class="logo">
+            <img src="../images/logo.svg" alt="">
+            <a href="https://mos.ru">mos.ru</a>
+        </div>
+        <div class="navbar">
+            <a href="#">Главная</a>
+            <a href="#">Новости</a>
+            <div class="dropdown">
+                <button class="dropbtn"> Выпадающий <i class="fa fa-caret-down"></i> </button>
+                <div class="dropdown-content">
+                    <a href="#">Ссылка 1</a>
+                    <a href="#">Ссылка 2</a>
+                    <a href="#">Ссылка 3</a>
+                </div>
+            </div> 
+        </div>
+    </section> 
+    <section class="main " th:object="${event}">
+        <div class="url">
+            <p class="afish"><a href="">Афиша</a></p>
+            <img src="../images/arrow.svg">
+            <p class="mp" th:text="${event.getName()}"></p>
+        </div>
+        <p class="head" th:text="${event.getName()}"></p>
+        <div class="card_detalis">
+            <p class="h" th:text="${event.getDescription()}"></p>
+            <p th:text="${event.getEventDate()}"></p>
+            <p>г. Москва</p>
+            <input type="text" th:value="${event.getAddress()}" hidden="hidden" id="address">
+            <div id="map"></div>
+        </div>
+    </section>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d8bbc530-7f8c-4ca4-ab67-905800c6271d&lang=ru_RU" type="text/javascript"> //Мы создали своё api
+    </script>
+    <script src="../Javascript/script_event_page.js"></script>
+    </body>
+</html>

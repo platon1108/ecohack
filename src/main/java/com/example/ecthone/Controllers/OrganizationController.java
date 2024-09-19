@@ -35,7 +35,9 @@ public class OrganizationController {
         Duration duration = Duration.getDuration(jsonObject.getString("duration"));
         String address = jsonObject.getString("address");
         Integer personid = jsonObject.getInt("personid");
-        Event event = new Event(name,description,format,duration,address,personid);
+        String date = jsonObject.getString("date");
+        String type = jsonObject.getString("icon");
+        Event event = new Event(name,description,format,duration,address,personid,date,type);
         eventDAO.save(event);
         Map<String, String> response = new HashMap<>();
         response.put("redirectUrl","/home?id="+personid);
@@ -52,7 +54,9 @@ public class OrganizationController {
         Duration duration = Duration.getDuration(jsonObject.getString("duration"));
         String address = jsonObject.getString("address");
         Integer personid = jsonObject.getInt("personid");
-        Event event = new Event(name,description,format,duration,address,personid);
+        String date = jsonObject.getString("date");
+        String type = jsonObject.getString("icon");
+        Event event = new Event(name,description,format,duration,address,personid,date,type);
         event.setId(jsonObject.getInt("id"));
         eventDAO.update(event);
         Map<String, String> response = new HashMap<>();
@@ -75,7 +79,7 @@ public class OrganizationController {
     @GetMapping("/event/{id}")
     public String event(@PathVariable Integer id, Model model) {
         model.addAttribute("event", eventDAO.findById(id));
-        return "EventPage";
+        return "EventOpenPage";
     }
 
     @RequestMapping("/home")
@@ -83,6 +87,6 @@ public class OrganizationController {
         model.addAttribute("name", personDAO.findById(id).getFio());
         model.addAttribute("ids", id);
         model.addAttribute("events", eventDAO.findPersonId(id));
-        return "home";
+        return "Events";
     }
 }

@@ -31,7 +31,9 @@ public class EventDAO {
             Duration duration = Duration.getDuration(rs.getString("duration"));
             String address = rs.getString("address");
             Integer personid = rs.getInt("personid");
-            Event event = new Event(name,description,format,duration,address,personid);
+            String date = rs.getString("eventdate");
+            String type = rs.getString("eventicom");
+            Event event = new Event(name,description,format,duration,address,personid,date,type);
             event.setId(rs.getInt("id"));
             return event;
         }
@@ -56,25 +58,29 @@ public class EventDAO {
     }
 
     public void save(Event event) {
-        String sql = "INSERT INTO event (name, description, format, duration, address,personid) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO event (name, description, format, duration, address,personid,eventdate,eventicom) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         String name = event.getName();
         String description = event.getDescription();
         String format = event.getFormat().toString();
         String duration = event.getDuration().toString();
         String address = event.getAddress();
         Integer personid = event.getPersonid();
-        jdbcTemplate.update(sql,name,description,format,duration,address,personid);
+        String date =  event.getEventDate();
+        String type = event.getEventIcon();
+        jdbcTemplate.update(sql,name,description,format,duration,address,personid,date,type);
     }
 
     public void update(Event event) {
-        String sql = "UPDATE event SET name = ?, description = ?, format = ?, duration = ?, address = ?,personid = ?  WHERE id = ?";
+        String sql = "UPDATE event SET name = ?, description = ?, format = ?, duration = ?, address = ?,personid = ?, eventdate  = ?,eventicom = ?  WHERE id = ?";
         String name = event.getName();
         String description = event.getDescription();
         String format = event.getFormat().toString();
         String duration = event.getDuration().toString();
         String address = event.getAddress();
         Integer personid = event.getPersonid();
-        jdbcTemplate.update(sql,name,description,format,duration,address,personid,event.getId());
+        String date =  event.getEventDate();
+        String type = event.getEventIcon();
+        jdbcTemplate.update(sql,name,description,format,duration,address,personid,date,type,event.getId());
     }
 
     public void deleteById(Integer id) {

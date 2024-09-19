@@ -39,21 +39,27 @@ public class Event {
     @Getter
     private Integer personid;
 
-    public String ruDuration(){
-        return duration.ru(duration);
-    }
-    public String ruFormat(){
-        return format.ru(format);
-    }
+    @Column(name = "eventDate")
+    @Setter
+    @Getter
+    private String eventDate;
 
-    public Event(String name, String description, Format format, Duration duration, String address, Integer personid) {
+    @Column(name = "eventIcon")
+    @Setter
+    @Getter
+    private String eventIcon;
+
+    public Event(String name, String description, Format format, Duration duration, String address, Integer personid, String eventDate, String eventIcon) {
         this.name = name;
         this.description = description;
         this.format = format;
         this.duration = duration;
         this.address = address;
         this.personid = personid;
+        this.eventDate = eventDate;
+        this.eventIcon = eventIcon;
     }
+
     public Event() {
 
     }

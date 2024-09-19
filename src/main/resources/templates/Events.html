@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экологические мероприятия</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles_event.css">
+</head>
+<body>
+    <section class="navigate">
+        <div class="logo">
+            <img src="images/logo.svg" alt="">
+            <a href="https://mos.ru">mos.ru</a>
+        </div>
+        <div class="navbar">
+            <a href="#">Главная</a>
+            <a href="#">Новости</a>
+            <div class="dropdown">
+                <button class="dropbtn"> Выпадающий <i class="fa fa-caret-down"></i> </button>
+                <div class="dropdown-content">
+                    <a href="#">Ссылка 1</a>
+                    <a href="#">Ссылка 2</a>
+                    <a href="#">Ссылка 3</a>
+                </div>
+            </div> 
+        </div>
+    </section> 
+    <section class="main">
+        <p class="search_p">Поиск</p>
+        <input class="search_input" type="text" name="search_input" placeholder="Введите ваш запрос">
+        <button>Найти</button>
+
+        <div class="main_center">
+            <div class="card">
+                <th:each th:each="event : ${events} ">
+                    <img th:src="'images/'+${event.getEventIcon()}+'.png'">
+                    <div class="header">
+                        <p class="name">Проект</p>
+                        <div class="rest"></div>
+                        <p class="date" th:text="${event.getEventDate()}"></p>
+                    </div>
+                    <p class="card_name">
+                        <a class="name" th:href="'/event/'+${event.getId()}" th:text="${event.getName()}"></a>
+                    </p>
+                    <p class="card_info" th:text="${event.getDescription()}"></p>
+                    <div class="card_line"></div>
+                </th:each>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

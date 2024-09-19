@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Golos_Text';
+    src: url(./Golos-Text_Regular.ttf);
+    font-style: normal;
+    line-height: normal;
+}
+body{
+    font-family: 'Golos_Text';
+    background-color: #E6E9ED;
+    overflow-x: hidden;
+}
+.navigate{
+    width: 100%;
+    height: 3.333vw;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo img{
+    width: 1.198vw;
+    height: 1.458vw;
+    margin-top: 0.938vw;
+    margin-left: 9.688vw;
+}
+.logo a{
+    color: #CC0029;
+    font-size: 1.302vw;
+    font-weight: 600;
+    margin-left: 0.573vw;
+    position: relative;
+    top: -0.417vw;
+    text-decoration: none;
+}
+.navbar {
+    overflow: hidden;
+    margin-left: 17.76vw;
+    margin-top: -50px;
+}
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 22px 36px;
+    text-decoration: none;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 22px 36px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+    color: #CC0029;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 22px 36px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.main{
+    min-width: 1270px;
+    margin-top: 5vw;
+    margin-left: 16.406vw;
+}
+.search_p{
+    font-size: 1.667vw;
+    font-weight: 600;
+    color: black;
+}
+.search_input{
+    width: 59.844vw;
+    height: 1.042vw;
+    padding: 0.729vw 0.938vw;
+    align-items: center;
+    border-radius: 0.417vw;
+    border: 0.052vw solid #828C99;
+    background: #FFF;
+    font-size: 0.833vw;
+    font-weight: 400;
+}
+.search_input:hover{
+    background: #F5F6F7;
+}
+.search_input:focus{
+    outline: 0.208vw solid #6688DD;
+}
+.main_center{
+    margin-top: 6.302vw;
+    width: 46.042vw;
+    height: 23.073vw;
+    border-radius: 1.198vw;
+    background: white;
+}
+.card{
+    width: 41.823vw;
+    height: 5.833vw;
+    position: relative;
+    top: 0.833vw;
+    margin-left: 1.25vw;
+}
+.card img{
+    width: 11.458vw;
+    height: 5.833vw;
+    margin-top: 0;
+}
+.rest{
+    width: 0.104vw;
+    height: 0.104vw;
+    background: #828C99;
+}
+.header, .card_info{
+    font-size: 0.729vw;
+    font-weight: 400;
+    max-width: 30.573vw;
+    color: #828C99;
+}
+.name{
+    margin-left: 11.25vw;
+    margin-top: -5.833vw;
+}
+.rest{
+    margin-left: 14.167vw;
+    margin-top: -1.183vw;
+}
+.date{
+    margin-left: 14.427vw;
+    margin-top: -0.533vw;
+}
+.card_name{
+    font-size: 0.781vw;
+    font-weight: 600;
+    color: #003099;
+    margin-left: 11.25vw;
+    margin-top: -0.313vw;
+}
+.card_name a{
+    text-decoration: none;
+}
+.card_name a:hover{
+    text-decoration: underline;
+}
+.card_info{
+    margin-left: 11.25vw;
+    margin-top: -0.353vw;
+}
+.card_line{
+    width: 43.542vw;
+    height: 0.052vw;
+    background: #E6E9ED;
+    margin-top: 2.396vw;
+}
