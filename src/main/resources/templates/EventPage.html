@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru"  xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../Javascript/EventManager.js"></script>
+<div th:object="${event}">
+    <input id="ids" hidden="hidden" th:value="${event.getPersonid()}" type="text">
+    <input id="idt" hidden="hidden" th:value="${event.getId()}" type="text">
+    <input id="name" th:value="${event.getName()}"></input>
+    <input id="description" th:value="${event.getDescription()}"></input>
+    <select id="format" th:value="${event.getFormat()}">
+        <option value="Open">Открытое</option>
+        <option value="Invite">По приглашению</option>
+        <option value="Private">Приват</option>
+    </select>
+    <select id="duration" th:value="${event.getDuration()}">
+        <option value="Onetime">Однократно</option>
+        <option value="Ntime">Многократно</option>
+        <option value="Constant">Вечно</option>
+    </select>
+    <input id="address" th:value="${event.getAddress()}"></input>
+</div>
+<button onclick="edit()">Редактировать</button>
+<button onclick="delet()">Удалить</button>
+</body>
+</html>

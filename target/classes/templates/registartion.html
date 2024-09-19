@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="left">
+        <img src="images/logo.svg" class="logo">
+        <p class="public">Доступ к информационным ресурсам города<br>Москвы</p>
+        <p class="official">Официальный сайт Мэра Москвы</p>
+        <div class="footer_left">
+            <p class="instruction">Инструкция для входа в личный кабинет:</p>
+            <p class="face"><a href="https://clck.ru/3DNtBb">Для физических лиц</a></p>
+            <p class="fiz"><a href="https://clck.ru/3DNtBd">Для юридических лиц и ИП</a></p>
+            <p class="org"><a href="https://clck.ru/3DNtBh">Для доверенных лиц организаций</a></p>
+            <p class="dep"><img src="images/c.svg">Департамент информационных технологий города Москвы</p>
+        </div>
+    </section>
+    <section class="right">
+        <p class="entrance">Регистрация</p>
+        <a class="reg" href="auth.html">Войти</a>
+        <div class="tg_div">
+            <p class="tg_p">Пройдите быструю регистрацию с помощью одного из предложенных сервисов</p>
+            <button class="tg"><script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="moseccobot" data-size="medium" data-userpic="false" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+            </button>
+        </div>
+
+        <div class="or">
+            <div class="line line_left"></div>
+            <p>или</p>
+            <div class="line line_right"></div>
+        </div>
+
+        <p class="create">Создайте единый личный кабинет для получения услуг и электронных сервисов Москвы</p>
+
+        <div class="auth">
+            <p class="info">Личные данные</p>
+            <label class="lastname" for="lastname">Фамилия</label>
+            <input class="lastname_input" type="text" id="lastname" name="lastname">
+
+            <label class="name" for="name"><p>Имя</p></label>
+            <input class="name_input" type="text" name="name" id="name" >
+
+            <label class="patronymic" for="patronymic"><p>Отчество</p></label>
+            <input class="patronymic_input" type="text" name="patronymic" id="patronymic">
+
+            <div class="all">
+                <input class="chebox_input" type="checkbox" id="scales" name="scales"/>
+                <label class="chebox" for="scales">Нет отчества</label>
+            </div>
+
+            <p class="contact">Контактные данные</p>
+            <p class="spam">На указанные номер мобильного телефона и адрес электронной почты будут отправлены коды подтверждения регистрации</p>
+
+            <label class="phone" for="phone">Мобильный телефон</label>
+            <input class="phone_input" type="text" name="phone" id="phone">
+
+            <label class="email" for="email"><p>Электронная почта</p></label>
+            <input class="email_input" type="email" name="email" id="email">
+
+            <p class="contact">Безопасность</p>
+            <p class="spam">Придумайте пароль, контрольный вопрос и ответ на него для получения и восстановления доступа к личному кабинету</p>
+
+            <label class="password" for="password">Пароль</label>
+            <input class="password_input" type="password" name="password" id="password">
+            <div class="checkpassword"></div>
+
+            <label class="doppassword" for="doppassword"><p>Повторите пароль</p></label>
+            <input class="doppassword_input" type="password" name="doppassword" id="doppassword">
+
+            <div class="all"></div>
+                <input class="chebox_input" type="checkbox" id="checkpass" name="checkpass"/>
+                <label class="chebox" for="checkpass">Показать пароль</label>
+            </div>
+
+            <div class="password_requirements">
+                <p>Пароль должен содержать:</p>
+                <div class="requirements_container">
+                    <ul>
+                        <li>Не менее 8 символов</li>
+                        <li>Цифры</li>
+                    </ul>
+                    <ul class="second">
+                        <li>Прописные буквы</li>
+                        <li>Строчные буквы</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="all all_footer"></div>
+            <input class="chebox_input" type="checkbox" id="doc" name="checkpass"/>
+                <label class="chebox" for="checkpass">Я принимаю условия <a href="https://clck.ru/3DNtBE">соглашения о пользовании информационными системами и ресурсами города Москвы</a> и ознакомлен с <a href="https://clck.ru/3DNtBV">политикой в отношении обработки персональных данных</a></label>
+            </div>
+
+            <button class="register" onclick= "sendRegistation()" disabled>Зарегистрироваться</button>
+        </div>
+    </section>
+    <script src="Javascript/loginRegProvider.js"></script>
+    <script src="Javascript/script.js"></script>
+</body>
+</html>

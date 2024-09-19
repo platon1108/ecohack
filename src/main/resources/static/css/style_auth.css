@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Golos_Text';
+    src: url(./Golos-Text_Regular.ttf);
+    font-style: normal;
+    line-height: normal;
+}
+body{
+    font-family: 'Golos_Text';
+    background-color: #E6E9ED;
+    overflow: hidden;
+}
+a:hover{
+    text-decoration: underline;
+}
+.logo{
+    width: 2.865vw;
+    height: 3.698vw;
+    margin-top: 3.125vw;
+    margin-left: 3.802vw;
+}
+.public{
+    color: #000;
+    font-size: 1.354vw;
+    font-weight: 600;
+    margin-left: 3.802vw;
+}
+.official{
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 0.938vw;
+    font-weight: 400;
+    margin-left: 3.802vw;
+}
+.footer_left{
+    font-weight: 400;
+    font-size: 0.729vw;
+    color: rgba(0, 0, 0, 0.80);
+    margin-top: 28%;
+    margin-left: 3.802vw;
+}
+.footer_left a{
+    color: rgba(0, 48, 153, 0.80);
+    text-decoration: none;
+}
+.footer_left a:hover{
+    text-decoration: underline;
+}
+.face{
+    margin-top: 0.781vw;
+}
+.fiz, .org{
+    margin-top: 0.573vw;
+}
+.dep{
+    margin-top: 1.406vw;
+}
+.dep img{
+    width: 0.521vw;
+    height: 0.521vw;
+    margin-right: 0.208vw;
+}
+.right{
+    width: 58.125vw;
+    height: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    margin-left: 41.875vw;
+}
+.entrance {
+    font-size: 1.667vw;
+    font-weight: 600;
+    color: black;
+    margin-top: 4.583vw;
+    margin-left: 16.615vw;
+}
+.reg{
+    font-size: 0.833vw;
+    font-weight: 400;
+    color: rgba(0, 48, 153, 0.80);
+    position: relative;
+    top: -3vw;
+    margin-left: 33.073vw;
+    text-decoration: none;
+}
+.auth{
+    max-width: 25vw;
+    margin-left: 16.563vw;
+    margin-top: 2.083vw;
+}
+.phone, .password{
+    font-size: 0.833vw;
+    font-weight: 600;
+    color: black;
+}
+.phone_input{
+    margin-top: 0.469vw;
+}
+.password_input{
+    margin-top: -0.469vw;
+}
+.passsword{
+    position: relative;
+    top: 1.042vw;
+}
+.phone_input, .password_input{
+    width: 100%;
+    height: 2.5vw;
+    background: transparent;
+    border: 0.052vw solid #C4C8D0;
+    border-radius: 0.208vw;
+    padding-left: 0.833vw;
+    font-size: 0.833vw;
+    font-weight: 400;
+}
+.phone_input:hover, .password_input:hover{
+    outline: 0.052vw solid #6688DD;
+}
+.phone_input:focus, .password_input:focus{
+    outline: 0.208vw solid #6688DD;
+}
+.all{
+    margin-top: 0.833vw;
+}
+.chebox_input{
+    width: 1.042vw;
+    height: 1.042vw;
+    border: 0.052vw solid #C4C8D0;
+    vertical-align: middle;
+}
+.chebox{
+    font-size: 0.833vw;
+    color: rgba(0, 0, 0, 0.80);
+    font-weight: 400;
+    padding-left: 0.625vw;
+}
+.reloadpassword{
+    font-size: 0.833vw;
+    font-weight: 400;
+    color: rgba(0, 48, 153, 0.80);
+    position: relative;
+    top: -1.3vw;
+    left: 17.2vw;
+    text-decoration: none;
+}
+.button{
+    width: 26.15vw;
+    height: 2.5vw;
+    margin-top: 1.302vw;
+    border-radius: 0.208vw;
+    background: #0044CC;
+    font-size: 0.833vw;
+    font-weight: 500;
+    color: white;
+    border: none;
+}
+.or{
+    width: 25vw;
+    font-size: 0.729vw;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+}
+.or{
+    margin-top: 2.188vw;
+}
+.or p{
+    margin-top: -0.625vw;
+    margin-left: 1.042vw;
+}
+.line{
+    width: 11.406vw;
+    height: 0.104vw;
+    background: #EFF0F3;
+}
+.line_left{
+    margin-left: 0;
+}
+.line_right{
+    margin-left: 14.494vw;
+    margin-top: -1.146vw;
+}
+.tg_p{
+    font-size: 0.833vw;
+    font-weight: 600;
+    margin-top: 1.25vw;
+}
+.tg{
+    width: 26.15vw;
+    height: 2.5vw;
+    margin-top: 0.885vw;
+    border-radius: 0.208vw;
+    background: linear-gradient(180deg, #2AABEE 0%, #229ED9 100%);
+    font-size: 0.833vw;
+    font-weight: 400;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tg img{
+    width: 1.194vw;
+    height: 0.99vw;
+    margin-right: 0.521vw;
+}
+.footer{
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    font-size: 0.833vw;
+    font-weight: 400;
+    margin-top: 1.719vw;
+}
+.footer span{
+    color: rgba(0, 48, 153, 0.80);
+}

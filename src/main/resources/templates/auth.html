@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru"  xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="css/style_auth.css">
+</head>
+<body>
+    <section class="left">
+        <img src="images/logo.svg" class="logo">
+        <p class="public">Доступ к информационным ресурсам города<br>Москвы</p>
+        <p class="official">Официальный сайт Мэра Москвы</p>
+        <div class="footer_left">
+            <p class="instruction">Инструкция для входа в личный кабинет:</p>
+            <p class="face"><a href="https://clck.ru/3DNtBb">Для физических лиц</a></p>
+            <p class="fiz"><a href="https://clck.ru/3DNtBd">Для юридических лиц и ИП</a></p>
+            <p class="org"><a href="https://clck.ru/3DNtBh">Для доверенных лиц организаций</a></p>
+            <p class="dep"><img src="images/c.svg">Департамент информационных технологий города Москвы</p>
+        </div>
+    </section>
+    <section class="right">
+        <p class="entrance">Вход</p>
+        <a class="reg" href="/reg">Зарегистрироваться</a>
+        <div class="auth">
+            <label class="phone" for="phone">Телефон или электронная почта</label>
+            <input class="phone_input" type="text" name="phone" id="login">
+
+            <label class="password" for="password"><p>Пароль</p></label>
+            <input class="password_input" type="password" name="password" id="password">
+
+            <div class="all">
+                <input class="chebox_input" type="checkbox" id="scales" name="scales"/>
+                <label class="chebox" for="scales">Показать пароль</label>
+            </div>
+
+            <a class="reloadpassword" href="#">Восстановить пароль</a>
+
+            <button class="button" onclick="sendLogin()">Войти</button>
+
+            <div class="or">
+                <div class="line line_left"></div>
+                <p>или</p>
+                <div class="line line_right"></div>
+            </div>
+
+            <p class="tg_p">Войти через</p>
+            <button class="tg">
+            <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="moseccobot" data-size="medium" data-userpic="false" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+            </button>
+            <p class="footer">Рекомендуем использовать <span>режим инкогнито</span> для входа с чужого устройства</p>
+        </div>
+    </section>
+
+    <script src="Javascript/script_auth.js"></script>
+    <script src="Javascript/loginRegProvider.js"></script>
+</body>
+</html>
